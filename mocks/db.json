@@ -1,0 +1,30 @@
+{
+  "corridas": [
+    {
+      "id": 1,
+      "data": "2025-11-30T20:30:00",
+      "origem": "Av. Paulista",
+      "destino": "Pinheiros",
+      "valor": 35.5,
+      "metodoPagamento": "PIX",
+      "plataforma": "Uber"
+    }
+  ],
+  "despesas": [
+    {
+      "id": 1,
+      "data": "2025-11-30T18:00:00",
+      "tipo": "Combustível",
+      "descricao": "Gasolina",
+      "valor": 150.0
+    }
+  ],
+  "metodosPagamento": [
+    { "id": 1, "codigo": "PIX", "descricao": "PIX" },
+    { "id": 2, "codigo": "CASH", "descricao": "Dinheiro" },
+    { "id": 3, "codigo": "CARD", "descricao": "Cartão de Crédito" }
+  ],
+  "usuarios": [
+    { "id": 1, "nome": "Edson", "email": "edson@teste.com", "senha": "123456" }
+  ]
+}

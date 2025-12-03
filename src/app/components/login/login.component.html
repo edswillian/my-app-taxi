@@ -1,0 +1,47 @@
+<div class="container-fluid text-center tittle-bar">
+  <h1>Painel Financeiro</h1>
+</div>
+
+<div class="container p-3 mt-3 bordeless-container">
+  <form [formGroup]="loginForm" (ngSubmit)="realizarLogin() ">
+    <div class="mb-3">
+      <label for="email" class="form-label">Email</label>
+      <input
+        type="email"
+        id="email"
+        formControlName="email"
+        class="form-control"
+      />
+      @if (loginForm.get('email')?.errors && loginForm.get('email')?.touched) {
+      <div class="campo-invalido">
+        Insira um email valido
+      </div>
+      }
+    </div>
+    <div class="mb-3">
+      <label for="password" class="form-label">Senha</label>
+      <input
+        type="password"
+        class="form-control"
+        id="password"
+        formControlName="password"
+        s
+      />
+      @if (loginForm.get('password')?.errors &&
+      loginForm.get('password')?.touched) {
+      <div class="campo-invalido">
+        Senha não pode ser nula
+      </div>
+      }
+    </div>
+    <div class="d-grid gap-2">
+      <button
+        [disabled]="loginForm.invalid"
+        type="submit"
+        class="btn btn-primary btn-lg"
+      >
+        Entrar
+      </button>
+    </div>
+  </form>
+</div>
